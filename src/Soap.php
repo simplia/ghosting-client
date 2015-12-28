@@ -11,14 +11,14 @@ namespace Simplia\GhostingClient;
  * @method bool EmailRemove(string $domain, string $mailbox)
  * @method array EmailGetList(string $domain)
  * @method bool EmailChangePassword(string $domain, string $mailbox, string $password)
- * @method EmailChangeCapacity(string $domain, string $mailbox, int $capacity)
- * @method EmailCreateRedirect(string $domain, string $mailbox, string $destinationEmailAddress, bool $isCopy)
- * @method EmailRemoveRedirect(string $domain, string $mailbox, string $destinationEmailAddress)
- * @method EmailGetRedirectsList(string $domain, string $mailbox)
- * @method EmailSetCatchallMailbox(string $domain, string $destinationEmailAddress)
- * @method EmailGetCatchallMailbox(string $domain)
- * @method EmailCreateSubdomain(string $domain, string $subDomain)
- * @method EmailRemoveSubdomain(string $domain, string $subDomain)
+ * @method bool EmailChangeCapacity(string $domain, string $mailbox, int $capacity)
+ * @method bool EmailCreateRedirect(string $domain, string $mailbox, string $destinationEmailAddress, bool $isCopy)
+ * @method bool EmailRemoveRedirect(string $domain, string $mailbox, string $destinationEmailAddress)
+ * @method array EmailGetRedirectsList(string $domain, string $mailbox)
+ * @method bool EmailSetCatchallMailbox(string $domain, string $destinationEmailAddress)
+ * @method string EmailGetCatchallMailbox(string $domain)
+ * @method bool EmailCreateSubdomain(string $domain, string $subDomain)
+ * @method bool EmailRemoveSubdomain(string $domain, string $subDomain)
  */
 class Soap extends \SoapClient {
 
