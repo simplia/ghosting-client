@@ -5,7 +5,7 @@ namespace Simplia\GhostingClient;
  * Class Soap
  * @package Simplia\GhostingClient
  * @url http://api.controlpanel.cz/docs/
- * @method bool EmailDomainAdd(string $domain, $username)
+ * @method bool EmailDomainAdd(string $domain, $username = '')
  * @method array EmailGetDomainsList()
  * @method array EmailCreate(string $domain, string $mailbox, string $password, int $capacity)
  * @method bool EmailRemove(string $domain, string $mailbox)

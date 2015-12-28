@@ -44,6 +44,14 @@ class Client {
         return true;
     }
 
+    public function addDomain($domain) {
+        try {
+            $this->getClient()->EmailDomainAdd($domain);
+        } catch (\SoapFault $e) {
+            throw $this->createException($e);
+        }
+    }
+
     private function createException(\SoapFault $e) {
         return new IOException($e->getMessage(), $e->getCode(), $e);
     }
