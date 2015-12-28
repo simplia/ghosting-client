@@ -57,7 +57,7 @@ class Client {
      * @param string $destination
      * @param bool $isCopy
      */
-    public function addForwarding($mailbox, $destination, $isCopy) {
+    public function addMailboxRedirect($mailbox, $destination, $isCopy) {
         try {
             $this->getClient()->EmailCreateRedirect(explode('@', $mailbox)[1], $mailbox, $destination, $isCopy);
         } catch (\SoapFault $e) {
