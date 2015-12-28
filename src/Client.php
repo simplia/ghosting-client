@@ -52,6 +52,19 @@ class Client {
         }
     }
 
+    /**
+     * @param string $mailbox
+     * @param string $destination
+     * @param bool $isCopy
+     */
+    public function addForwarding($mailbox, $destination, $isCopy) {
+        try {
+            $this->getClient()->EmailCreateRedirect(explode('@', $mailbox)[1], $mailbox, $destination, $isCopy);
+        } catch (\SoapFault $e) {
+            throw $this->createException($e);
+        }
+    }
+
     private function createException(\SoapFault $e) {
         return new IOException($e->getMessage(), $e->getCode(), $e);
     }
