@@ -36,7 +36,7 @@ class Client {
         try {
             $this->getClient()->EmailGetList($domain);
         } catch (\SoapFault $e) {
-            if($e['faultcode'] === '100|004') {
+            if($e->faultcode === '100|004') {
                 return false;
             }
             throw $this->createException($e);
