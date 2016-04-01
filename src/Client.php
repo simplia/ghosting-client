@@ -32,6 +32,9 @@ class Client {
         return $this->client;
     }
 
+    /**
+     * @return \Generator|Domain[]
+     */
     public function getDomains() {
         try {
             foreach ($this->getClient()->EmailGetDomainsList() as $data) {
@@ -44,6 +47,10 @@ class Client {
         }
     }
 
+    /**
+     * @param $domainName
+     * @return \Generator|Mailbox[]
+     */
     public function getEmails($domainName) {
         try {
             foreach ($this->getClient()->EmailGetList($domainName) as $data) {
@@ -133,7 +140,7 @@ class Client {
      * @param $domain
      * @return array
      */
-    public function doesDomainExists($domain) {
+    public function doesDomainExist($domain) {
         try {
             $this->getClient()->EmailGetList($domain);
         } catch (\SoapFault $e) {
@@ -143,6 +150,19 @@ class Client {
             throw $this->createException($e);
         }
         return true;
+    }
+
+    /**
+     * @param string $email
+     * @return array
+     */
+    public function doesEmailExist($email) {
+        foreach ($this->getEmails(explode('@', $email)[1]) as $mailbox) {
+            if($mailbox->getName() === $email) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private function createException(\SoapFault $e) {
