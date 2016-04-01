@@ -14,7 +14,7 @@ namespace Soukicz\GhostingClient;
  * @method bool EmailChangeCapacity(string $domain, string $mailbox, int $capacity)
  * @method bool EmailCreateRedirect(string $domain, string $mailbox, string $destinationEmailAddress, bool $isCopy)
  * @method bool EmailRemoveRedirect(string $domain, string $mailbox, string $destinationEmailAddress)
- * @method array EmailGetRedirectsList(string $domain, string $mailbox)
+ * @method array EmailGetRedirectsList(string $domain)
  * @method bool EmailSetCatchallMailbox(string $domain, string $destinationEmailAddress)
  * @method string EmailGetCatchallMailbox(string $domain)
  * @method bool EmailCreateSubdomain(string $domain, string $subDomain)
