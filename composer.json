@@ -19,10 +19,7 @@
   "autoload": {
     "psr-4": {
       "Soukicz\\GhostingClient\\": "src/"
-    },
-    "classmap": [
-      "src/exceptions.php"
-    ]
+    }
   },
   "autoload-dev": {
     "classmap": [
