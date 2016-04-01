@@ -1,6 +1,6 @@
 <?php
 
-namespace Simplia\GhostingClient;
+namespace Soukicz\GhostingClient;
 
 interface Exception {
 }

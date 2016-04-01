@@ -1,5 +1,5 @@
 <?php
-namespace GhostingClientTests;
+namespace SoukiczClientTests;
 
 class ClientTest extends \PHPUnit_Framework_TestCase {
 

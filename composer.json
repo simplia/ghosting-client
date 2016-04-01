@@ -1,8 +1,8 @@
 {
-  "name": "simplia/ghosting-client",
+  "name": "soukicz/ghosting-client",
   "description": "Ghosting.cz",
   "minimum-stability": "stable",
-  "license": "proprietary",
+  "license": "MIT",
   "authors": [
     {
       "name": "Petr Soukup",
@@ -14,11 +14,11 @@
     "ext-soap": "*"
   },
   "require-dev": {
-    "phpunit/phpunit": "~4.0"
+    "phpunit/phpunit": "~5.0"
   },
   "autoload": {
     "psr-4": {
-      "Simplia\\GhostingClient\\": "src/"
+      "Soukicz\\GhostingClient\\": "src/"
     },
     "classmap": [
       "src/exceptions.php"
@@ -26,7 +26,7 @@
   },
   "autoload-dev": {
     "classmap": [
-      "tests/SimpliaTests"
+      "tests/SoukiczTests"
     ]
   }
 }

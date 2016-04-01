@@ -1,5 +1,5 @@
 <?php
-namespace Simplia\GhostingClient;
+namespace Soukicz\GhostingClient;
 
 /**
  * Class Soap
