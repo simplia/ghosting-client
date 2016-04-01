@@ -71,7 +71,7 @@ class Client {
                 $redirect = new Redirect();
                 $redirect
                     ->setMailbox((string)$data['mailbox'])
-                    ->setDestination((float)$data['destination'])
+                    ->setDestination((string)$data['destination'])
                     ->setCopy((bool)$data['copy']);
                 yield $redirect;
             }
