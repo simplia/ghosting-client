@@ -136,6 +136,14 @@ class Client {
         }
     }
 
+    public function deleteMailbox($mailbox) {
+        try {
+            $this->getClient()->EmailRemove(explode('@', $mailbox)[1], explode('@', $mailbox)[0]);
+        } catch (\SoapFault $e) {
+            throw $this->createException($e);
+        }
+    }
+    
     /**
      * @param $domain
      * @return array
