@@ -1,9 +1,9 @@
 <?php
 namespace Soukicz\GhostingClient;
 
-use Soukicz\GhostingClient\Entity\Domain\Domain;
-use Soukicz\GhostingClient\Entity\Domain\Mailbox;
-use Soukicz\GhostingClient\Entity\Domain\Redirect;
+use Soukicz\GhostingClient\Entity\Domain;
+use Soukicz\GhostingClient\Entity\Mailbox;
+use Soukicz\GhostingClient\Entity\Redirect;
 
 class Client {
     protected $login;
@@ -146,7 +146,7 @@ class Client {
     
     /**
      * @param $domain
-     * @return array
+     * @return bool
      */
     public function doesDomainExist($domain) {
         try {
@@ -162,7 +162,7 @@ class Client {
 
     /**
      * @param string $email
-     * @return array
+     * @return bool
      */
     public function doesEmailExist($email) {
         foreach ($this->getEmails(explode('@', $email)[1]) as $mailbox) {

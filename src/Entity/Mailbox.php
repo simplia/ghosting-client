@@ -1,5 +1,5 @@
 <?php
-namespace Soukicz\GhostingClient\Entity\Domain;
+namespace Soukicz\GhostingClient\Entity;
 
 class Mailbox {
     /**
